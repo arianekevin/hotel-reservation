@@ -1,8 +1,15 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import RoomDetailPage from './pages/RoomDetailPage'
+
 function App() {
   return (
-    <div>
-      <h1>Hotel Reservation</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/rooms/:id" element={<RoomDetailPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
