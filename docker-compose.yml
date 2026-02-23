@@ -17,6 +17,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/hotel
       SPRING_DATASOURCE_USERNAME: hotel_user
       SPRING_DATASOURCE_PASSWORD: hotel_pass
+      SPRING_SQL_INIT_MODE: always
+      SPRING_JPA_DEFER_DATASOURCE_INITIALIZATION: true
     depends_on:
       - db
 
