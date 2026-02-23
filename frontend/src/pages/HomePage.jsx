@@ -13,10 +13,10 @@ function HomePage() {
     }, [])
 
     return (
-        <div>
+        <main>
             <h1>Available Rooms</h1>
             {rooms.map(room => (
-                <div key={room.id}>
+                <div key={room.id} className='room-card'>
                     <Link to={`/rooms/${room.id}`}>
                         <h2>{room.name}</h2>
                     </Link>
@@ -24,7 +24,7 @@ function HomePage() {
                     <p>R$ {room.pricePerNight}</p>
                 </div>
             ))}
-        </div>
+        </main>
     )
 }
 

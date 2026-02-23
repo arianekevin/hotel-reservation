@@ -15,13 +15,13 @@ function RoomDetailPage() {
   if (!room) return <p>Loading...</p>
 
   return (
-    <div>
+    <main>
       <h1>{room.name}</h1>
       <img src={room.imageUrl} alt={room.name} width="400" />
       <p>{room.description}</p>
       <p>R$ {room.pricePerNight} per night</p>
       <button disabled>Reserve</button>
-    </div>
+    </main>
   )
 }
 
