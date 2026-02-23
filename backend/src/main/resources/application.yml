@@ -1,4 +1,7 @@
 spring:
+  sql:
+    init:
+      mode: always
   datasource:
     url: jdbc:postgresql://localhost:5432/hotel
     username: hotel_user
@@ -8,6 +11,8 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+    defer-datasource-initialization: true
+
 
 server:
   port: 8080
