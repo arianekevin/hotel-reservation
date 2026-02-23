@@ -1,0 +1,9 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: hotel
+      POSTGRES_USER: hotel_user
+      POSTGRES_PASSWORD: hotel_pass
+    ports:
+      - "5432:5432"
