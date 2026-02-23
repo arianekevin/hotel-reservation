@@ -1,5 +1,7 @@
 package com.hotel.service;
 
+import com.hotel.exception.BusinessException;
+import com.hotel.exception.GlobalExceptionHandler;
 import com.hotel.model.Room;
 import com.hotel.repository.RoomRepository;
 import org.springframework.stereotype.Service;
@@ -20,7 +22,7 @@ public class RoomService {
 
     public Room findById(Long id) {
         return roomRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Room not found"));
+                .orElseThrow(() -> new BusinessException("Room not found"));
     }
 
 }
